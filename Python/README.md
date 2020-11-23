@@ -1,1 +1,1 @@
-Exponential decay and double pendulum in python.s
+Exponential decay and double pendulum in python.
