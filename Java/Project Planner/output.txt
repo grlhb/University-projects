@@ -1,0 +1,787 @@
+buildgarage.txt:
+Task ID: 1	Name: get-paperwork	Time: 14280	Staff: 1
+		Earliest start: 0	Slack: 0	Critical: true
+		Predecessor IDs: 
+
+Task ID: 2	Name: call-contractor	Time: 4	Staff: 1
+		Earliest start: 14280	Slack: 215898	Critical: false
+		Predecessor IDs:  1 
+
+Task ID: 3	Name: clean-yard	Time: 215902	Staff: 3
+		Earliest start: 14280	Slack: 0	Critical: true
+		Predecessor IDs:  1 
+
+Task ID: 4	Name: build-foundation	Time: 32134	Staff: 2
+		Earliest start: 230182	Slack: 0	Critical: true
+		Predecessor IDs:  2  3 
+
+Task ID: 5	Name: build-wall-support	Time: 41232	Staff: 4
+		Earliest start: 262316	Slack: 0	Critical: true
+		Predecessor IDs:  4 
+
+Task ID: 6	Name: lay-electrical-cables	Time: 142	Staff: 1
+		Earliest start: 262316	Slack: 222455	Critical: false
+		Predecessor IDs:  4 
+
+Task ID: 7	Name: call-electrician	Time: 15	Staff: 1
+		Earliest start: 262316	Slack: 181337	Critical: false
+		Predecessor IDs:  4 
+
+Task ID: 8	Name: install-electrical-gate-opener	Time: 41245	Staff: 2
+		Earliest start: 363997	Slack: 79671	Critical: false
+		Predecessor IDs:  5  7  10 
+
+Task ID: 9	Name: build-walls	Time: 6127	Staff: 4
+		Earliest start: 303548	Slack: 79671	Critical: false
+		Predecessor IDs:  5 
+
+Task ID: 10	Name: add-gate	Time: 54322	Staff: 3
+		Earliest start: 309675	Slack: 79671	Critical: false
+		Predecessor IDs:  9 
+
+Task ID: 11	Name: build-stairs	Time: 4325	Staff: 2
+		Earliest start: 303548	Slack: 0	Critical: true
+		Predecessor IDs:  5 
+
+Task ID: 12	Name: add-2nd-floor	Time: 121478	Staff: 4
+		Earliest start: 307873	Slack: 0	Critical: true
+		Predecessor IDs:  11 
+
+Task ID: 13	Name: isolate-room	Time: 1242	Staff: 3
+		Earliest start: 429351	Slack: 0	Critical: true
+		Predecessor IDs:  12  9 
+
+Task ID: 14	Name: furnish-appartment	Time: 54320	Staff: 2
+		Earliest start: 430593	Slack: 0	Critical: true
+		Predecessor IDs:  13 
+
+Starting project
+Time: 0
+		 Starting: get-paperwork
+		 Current staff: 1
+
+Time: 14280
+		 Finished: get-paperwork	 Time taken: 14280
+		 Current staff: 0
+
+Time: 14280
+		 Starting: call-contractor
+		 Current staff: 1
+
+Time: 14280
+		 Starting: clean-yard
+		 Current staff: 4
+
+Time: 14284
+		 Finished: call-contractor	 Time taken: 4
+		 Current staff: 3
+
+Time: 230182
+		 Finished: clean-yard	 Time taken: 215902
+		 Current staff: 0
+
+Time: 230182
+		 Starting: build-foundation
+		 Current staff: 2
+
+Time: 262316
+		 Finished: build-foundation	 Time taken: 32134
+		 Current staff: 0
+
+Time: 262316
+		 Starting: build-wall-support
+		 Current staff: 4
+
+Time: 262316
+		 Starting: lay-electrical-cables
+		 Current staff: 5
+
+Time: 262316
+		 Starting: call-electrician
+		 Current staff: 6
+
+Time: 262331
+		 Finished: call-electrician	 Time taken: 15
+		 Current staff: 5
+
+Time: 262458
+		 Finished: lay-electrical-cables	 Time taken: 142
+		 Current staff: 4
+
+Time: 303548
+		 Finished: build-wall-support	 Time taken: 41232
+		 Current staff: 0
+
+Time: 303548
+		 Starting: build-walls
+		 Current staff: 4
+
+Time: 303548
+		 Starting: build-stairs
+		 Current staff: 6
+
+Time: 307873
+		 Finished: build-stairs	 Time taken: 4325
+		 Current staff: 4
+
+Time: 307873
+		 Starting: add-2nd-floor
+		 Current staff: 8
+
+Time: 309675
+		 Finished: build-walls	 Time taken: 6127
+		 Current staff: 4
+
+Time: 309675
+		 Starting: add-gate
+		 Current staff: 7
+
+Time: 363997
+		 Starting: install-electrical-gate-opener
+		 Current staff: 9
+
+Time: 363997
+		 Finished: add-gate	 Time taken: 54322
+		 Current staff: 6
+
+Time: 405242
+		 Finished: install-electrical-gate-opener	 Time taken: 41245
+		 Current staff: 4
+
+Time: 429351
+		 Finished: add-2nd-floor	 Time taken: 121478
+		 Current staff: 0
+
+Time: 429351
+		 Starting: isolate-room
+		 Current staff: 3
+
+Time: 430593
+		 Finished: isolate-room	 Time taken: 1242
+		 Current staff: 0
+
+Time: 430593
+		 Starting: furnish-appartment
+		 Current staff: 2
+
+Time: 484913
+		 Finished: furnish-appartment	 Time taken: 54320
+		 Current staff: 0
+
+Finished!
+**** Shortest possible project execution is 484913 ****
+
+
+
+
+
+
+
+buildhouse1.txt:
+
+Task ID: 1	Name: Build-walls	Time: 4	Staff: 2
+		Earliest start: 4	Slack: 0	Critical: true
+		Predecessor IDs:  5 
+
+Task ID: 2	Name: Build-roofs	Time: 6	Staff: 4
+		Earliest start: 8	Slack: 0	Critical: true
+		Predecessor IDs:  1 
+
+Task ID: 3	Name: Put-on-wallpapers	Time: 1	Staff: 2
+		Earliest start: 14	Slack: 3	Critical: false
+		Predecessor IDs:  1  2 
+
+Task ID: 4	Name: Put-on-tiles	Time: 1	Staff: 3
+		Earliest start: 14	Slack: 7	Critical: false
+		Predecessor IDs:  2 
+
+Task ID: 5	Name: Build-foundation	Time: 4	Staff: 2
+		Earliest start: 0	Slack: 0	Critical: true
+		Predecessor IDs: 
+
+Task ID: 6	Name: Make-floor	Time: 2	Staff: 2
+		Earliest start: 4	Slack: 8	Critical: false
+		Predecessor IDs:  5 
+
+Task ID: 7	Name: Put-carpet-floor	Time: 4	Staff: 2
+		Earliest start: 14	Slack: 0	Critical: true
+		Predecessor IDs:  6  2 
+
+Task ID: 8	Name: Move-in	Time: 4	Staff: 4
+		Earliest start: 18	Slack: 0	Critical: true
+		Predecessor IDs:  3  7 
+
+Starting project
+Time: 0
+		 Starting: Build-foundation
+		 Current staff: 2
+
+Time: 4
+		 Starting: Build-walls
+		 Current staff: 4
+
+Time: 4
+		 Finished: Build-foundation	 Time taken: 4
+		 Current staff: 2
+
+Time: 4
+		 Starting: Make-floor
+		 Current staff: 4
+
+Time: 6
+		 Finished: Make-floor	 Time taken: 2
+		 Current staff: 2
+
+Time: 8
+		 Finished: Build-walls	 Time taken: 4
+		 Current staff: 0
+
+Time: 8
+		 Starting: Build-roofs
+		 Current staff: 4
+
+Time: 14
+		 Finished: Build-roofs	 Time taken: 6
+		 Current staff: 0
+
+Time: 14
+		 Starting: Put-on-wallpapers
+		 Current staff: 2
+
+Time: 14
+		 Starting: Put-on-tiles
+		 Current staff: 5
+
+Time: 14
+		 Starting: Put-carpet-floor
+		 Current staff: 7
+
+Time: 15
+		 Finished: Put-on-wallpapers	 Time taken: 1
+		 Current staff: 5
+
+Time: 15
+		 Finished: Put-on-tiles	 Time taken: 1
+		 Current staff: 2
+
+Time: 18
+		 Finished: Put-carpet-floor	 Time taken: 4
+		 Current staff: 0
+
+Time: 18
+		 Starting: Move-in
+		 Current staff: 4
+
+Time: 22
+		 Finished: Move-in	 Time taken: 4
+		 Current staff: 0
+
+Finished!
+**** Shortest possible project execution is 22 ****
+
+
+
+
+
+
+buildhouse2.txt: 
+Project is unrealizable
+
+
+
+
+
+
+buildrail.txt
+Task ID: 1	Name: Install-pavement	Time: 20	Staff: 10
+		Earliest start: 186	Slack: 12	Critical: false
+		Predecessor IDs:  28  29 
+
+Task ID: 2	Name: Install-railing	Time: 7	Staff: 10
+		Earliest start: 5	Slack: 206	Critical: false
+		Predecessor IDs:  10 
+
+Task ID: 3	Name: Install-ticketmachine	Time: 1	Staff: 10
+		Earliest start: 63	Slack: 154	Critical: false
+		Predecessor IDs:  8 
+
+Task ID: 4	Name: Paint-tower-1-with-arch	Time: 15	Staff: 6
+		Earliest start: 119	Slack: 84	Critical: false
+		Predecessor IDs:  24 
+
+Task ID: 5	Name: Paint-tower-2	Time: 12	Staff: 6
+		Earliest start: 124	Slack: 82	Critical: false
+		Predecessor IDs:  25 
+
+Task ID: 6	Name: Paint-trusses	Time: 27	Staff: 6
+		Earliest start: 186	Slack: 5	Critical: false
+		Predecessor IDs:  28  29 
+
+Task ID: 7	Name: Paint-cables-and-rods	Time: 18	Staff: 6
+		Earliest start: 186	Slack: 14	Critical: false
+		Predecessor IDs:  28  29 
+
+Task ID: 8	Name: Put-lane-tunnel-and-intersection	Time: 12	Staff: 7
+		Earliest start: 51	Slack: 143	Critical: false
+		Predecessor IDs:  13  15 
+
+Task ID: 9	Name: Setup-barrack	Time: 3	Staff: 10
+		Earliest start: 0	Slack: 0	Critical: true
+		Predecessor IDs: 
+
+Task ID: 10	Name: Prepare-storage	Time: 2	Staff: 4
+		Earliest start: 3	Slack: 206	Critical: false
+		Predecessor IDs:  9 
+
+Task ID: 11	Name: Rig-ramspace-reinforcing	Time: 1	Staff: 4
+		Earliest start: 3	Slack: 140	Critical: false
+		Predecessor IDs:  9 
+
+Task ID: 12	Name: Build-tunnel	Time: 30	Staff: 12
+		Earliest start: 3	Slack: 143	Critical: false
+		Predecessor IDs:  9 
+
+Task ID: 13	Name: Clean-tunnel	Time: 18	Staff: 12
+		Earliest start: 33	Slack: 143	Critical: false
+		Predecessor IDs:  12 
+
+Task ID: 14	Name: Build-intersection	Time: 25	Staff: 12
+		Earliest start: 3	Slack: 146	Critical: false
+		Predecessor IDs:  9 
+
+Task ID: 15	Name: Clean-intersection	Time: 20	Staff: 12
+		Earliest start: 28	Slack: 146	Critical: false
+		Predecessor IDs:  14 
+
+Task ID: 16	Name: Build-towerfoundation-1	Time: 35	Staff: 12
+		Earliest start: 3	Slack: 11	Critical: false
+		Predecessor IDs:  9 
+
+Task ID: 17	Name: Build-towerfoundation-2	Time: 45	Staff: 12
+		Earliest start: 3	Slack: 0	Critical: true
+		Predecessor IDs:  9 
+
+Task ID: 18	Name: Make-armouring-tower-1	Time: 40	Staff: 4
+		Earliest start: 4	Slack: 5	Critical: false
+		Predecessor IDs:  11 
+
+Task ID: 19	Name: Make-armouring-tower-2	Time: 25	Staff: 4
+		Earliest start: 4	Slack: 19	Critical: false
+		Predecessor IDs:  11 
+
+Task ID: 20	Name: Make-armouring-arch	Time: 12	Staff: 4
+		Earliest start: 4	Slack: 140	Critical: false
+		Predecessor IDs:  11 
+
+Task ID: 21	Name: Encase-and-armour-tower-1	Time: 15	Staff: 5
+		Earliest start: 44	Slack: 5	Critical: false
+		Predecessor IDs:  16  18 
+
+Task ID: 22	Name: Encase-and-armour-tower-2	Time: 16	Staff: 5
+		Earliest start: 48	Slack: 0	Critical: true
+		Predecessor IDs:  17  19 
+
+Task ID: 23	Name: Encase-and-armour-arch	Time: 30	Staff: 5
+		Earliest start: 16	Slack: 140	Critical: false
+		Predecessor IDs:  20 
+
+Task ID: 24	Name: Cast-tower-1	Time: 60	Staff: 7
+		Earliest start: 59	Slack: 5	Critical: false
+		Predecessor IDs:  21 
+
+Task ID: 25	Name: Cast-tower-2	Time: 60	Staff: 7
+		Earliest start: 64	Slack: 0	Critical: true
+		Predecessor IDs:  22 
+
+Task ID: 26	Name: Cast-arch	Time: 20	Staff: 7
+		Earliest start: 46	Slack: 140	Critical: false
+		Predecessor IDs:  23 
+
+Task ID: 27	Name: Stretch-two-maincables	Time: 25	Staff: 10
+		Earliest start: 124	Slack: 0	Critical: true
+		Predecessor IDs:  24  25 
+
+Task ID: 28	Name: Build-truss-1-with-rods	Time: 30	Staff: 10
+		Earliest start: 149	Slack: 7	Critical: false
+		Predecessor IDs:  27 
+
+Task ID: 29	Name: Build-truss-2-with-rods	Time: 37	Staff: 10
+		Earliest start: 149	Slack: 0	Critical: true
+		Predecessor IDs:  27 
+
+Task ID: 30	Name: Cast-lane-on-truss	Time: 20	Staff: 7
+		Earliest start: 186	Slack: 0	Critical: true
+		Predecessor IDs:  28  29 
+
+Task ID: 31	Name: Polish-lane-on-arch	Time: 12	Staff: 7
+		Earliest start: 206	Slack: 0	Critical: true
+		Predecessor IDs:  30  26  8 
+
+Starting project
+Time: 0
+		 Starting: Setup-barrack
+		 Current staff: 10
+
+Time: 3
+		 Finished: Setup-barrack	 Time taken: 3
+		 Current staff: 0
+
+Time: 3
+		 Starting: Prepare-storage
+		 Current staff: 4
+
+Time: 3
+		 Starting: Rig-ramspace-reinforcing
+		 Current staff: 8
+
+Time: 3
+		 Starting: Build-tunnel
+		 Current staff: 20
+
+Time: 3
+		 Starting: Build-intersection
+		 Current staff: 32
+
+Time: 3
+		 Starting: Build-towerfoundation-1
+		 Current staff: 44
+
+Time: 3
+		 Starting: Build-towerfoundation-2
+		 Current staff: 56
+
+Time: 4
+		 Finished: Rig-ramspace-reinforcing	 Time taken: 1
+		 Current staff: 52
+
+Time: 4
+		 Starting: Make-armouring-tower-1
+		 Current staff: 56
+
+Time: 4
+		 Starting: Make-armouring-tower-2
+		 Current staff: 60
+
+Time: 4
+		 Starting: Make-armouring-arch
+		 Current staff: 64
+
+Time: 5
+		 Starting: Install-railing
+		 Current staff: 74
+
+Time: 5
+		 Finished: Prepare-storage	 Time taken: 2
+		 Current staff: 70
+
+Time: 12
+		 Finished: Install-railing	 Time taken: 7
+		 Current staff: 60
+
+Time: 16
+		 Finished: Make-armouring-arch	 Time taken: 12
+		 Current staff: 56
+
+Time: 16
+		 Starting: Encase-and-armour-arch
+		 Current staff: 61
+
+Time: 28
+		 Finished: Build-intersection	 Time taken: 25
+		 Current staff: 49
+
+Time: 28
+		 Starting: Clean-intersection
+		 Current staff: 61
+
+Time: 29
+		 Finished: Make-armouring-tower-2	 Time taken: 25
+		 Current staff: 57
+
+Time: 33
+		 Finished: Build-tunnel	 Time taken: 30
+		 Current staff: 45
+
+Time: 33
+		 Starting: Clean-tunnel
+		 Current staff: 57
+
+Time: 38
+		 Finished: Build-towerfoundation-1	 Time taken: 35
+		 Current staff: 45
+
+Time: 44
+		 Finished: Make-armouring-tower-1	 Time taken: 40
+		 Current staff: 41
+
+Time: 44
+		 Starting: Encase-and-armour-tower-1
+		 Current staff: 46
+
+Time: 46
+		 Finished: Encase-and-armour-arch	 Time taken: 30
+		 Current staff: 41
+
+Time: 46
+		 Starting: Cast-arch
+		 Current staff: 48
+
+Time: 48
+		 Finished: Clean-intersection	 Time taken: 20
+		 Current staff: 36
+
+Time: 48
+		 Finished: Build-towerfoundation-2	 Time taken: 45
+		 Current staff: 24
+
+Time: 48
+		 Starting: Encase-and-armour-tower-2
+		 Current staff: 29
+
+Time: 51
+		 Starting: Put-lane-tunnel-and-intersection
+		 Current staff: 36
+
+Time: 51
+		 Finished: Clean-tunnel	 Time taken: 18
+		 Current staff: 24
+
+Time: 59
+		 Finished: Encase-and-armour-tower-1	 Time taken: 15
+		 Current staff: 19
+
+Time: 59
+		 Starting: Cast-tower-1
+		 Current staff: 26
+
+Time: 63
+		 Starting: Install-ticketmachine
+		 Current staff: 36
+
+Time: 63
+		 Finished: Put-lane-tunnel-and-intersection	 Time taken: 12
+		 Current staff: 29
+
+Time: 64
+		 Finished: Install-ticketmachine	 Time taken: 1
+		 Current staff: 19
+
+Time: 64
+		 Finished: Encase-and-armour-tower-2	 Time taken: 16
+		 Current staff: 14
+
+Time: 64
+		 Starting: Cast-tower-2
+		 Current staff: 21
+
+Time: 66
+		 Finished: Cast-arch	 Time taken: 20
+		 Current staff: 14
+
+Time: 119
+		 Starting: Paint-tower-1-with-arch
+		 Current staff: 20
+
+Time: 119
+		 Finished: Cast-tower-1	 Time taken: 60
+		 Current staff: 13
+
+Time: 124
+		 Starting: Paint-tower-2
+		 Current staff: 19
+
+Time: 124
+		 Finished: Cast-tower-2	 Time taken: 60
+		 Current staff: 12
+
+Time: 124
+		 Starting: Stretch-two-maincables
+		 Current staff: 22
+
+Time: 134
+		 Finished: Paint-tower-1-with-arch	 Time taken: 15
+		 Current staff: 16
+
+Time: 136
+		 Finished: Paint-tower-2	 Time taken: 12
+		 Current staff: 10
+
+Time: 149
+		 Finished: Stretch-two-maincables	 Time taken: 25
+		 Current staff: 0
+
+Time: 149
+		 Starting: Build-truss-1-with-rods
+		 Current staff: 10
+
+Time: 149
+		 Starting: Build-truss-2-with-rods
+		 Current staff: 20
+
+Time: 179
+		 Finished: Build-truss-1-with-rods	 Time taken: 30
+		 Current staff: 10
+
+Time: 186
+		 Starting: Install-pavement
+		 Current staff: 20
+
+Time: 186
+		 Starting: Paint-trusses
+		 Current staff: 26
+
+Time: 186
+		 Starting: Paint-cables-and-rods
+		 Current staff: 32
+
+Time: 186
+		 Finished: Build-truss-2-with-rods	 Time taken: 37
+		 Current staff: 22
+
+Time: 186
+		 Starting: Cast-lane-on-truss
+		 Current staff: 29
+
+Time: 204
+		 Finished: Paint-cables-and-rods	 Time taken: 18
+		 Current staff: 23
+
+Time: 206
+		 Finished: Install-pavement	 Time taken: 20
+		 Current staff: 13
+
+Time: 206
+		 Finished: Cast-lane-on-truss	 Time taken: 20
+		 Current staff: 6
+
+Time: 206
+		 Starting: Polish-lane-on-arch
+		 Current staff: 13
+
+Time: 213
+		 Finished: Paint-trusses	 Time taken: 27
+		 Current staff: 7
+
+Time: 218
+		 Finished: Polish-lane-on-arch	 Time taken: 12
+		 Current staff: 0
+
+Finished!
+**** Shortest possible project execution is 218 ****
+
+
+
+
+
+
+examplefigure.txt:
+Task ID: 1	Name: 1	Time: 3	Staff: 4
+		Earliest start: 0	Slack: 0	Critical: true
+		Predecessor IDs: 
+
+Task ID: 2	Name: 2	Time: 5	Staff: 2
+		Earliest start: 0	Slack: 0	Critical: true
+		Predecessor IDs: 
+
+Task ID: 3	Name: 3	Time: 1	Staff: 2
+		Earliest start: 5	Slack: 1	Critical: false
+		Predecessor IDs:  1  2 
+
+Task ID: 4	Name: 4	Time: 2	Staff: 4
+		Earliest start: 5	Slack: 0	Critical: true
+		Predecessor IDs:  2 
+
+Task ID: 5	Name: 5	Time: 4	Staff: 3
+		Earliest start: 6	Slack: 5	Critical: false
+		Predecessor IDs:  3 
+
+Task ID: 6	Name: 6	Time: 8	Staff: 4
+		Earliest start: 7	Slack: 0	Critical: true
+		Predecessor IDs:  3  4 
+
+Task ID: 7	Name: 7	Time: 3	Staff: 2
+		Earliest start: 15	Slack: 0	Critical: true
+		Predecessor IDs:  5  6 
+
+Task ID: 8	Name: 8	Time: 1	Staff: 3
+		Earliest start: 15	Slack: 2	Critical: false
+		Predecessor IDs:  6 
+
+Starting project
+Time: 0
+		 Starting: 1
+		 Current staff: 4
+
+Time: 0
+		 Starting: 2
+		 Current staff: 6
+
+Time: 3
+		 Finished: 1	 Time taken: 3
+		 Current staff: 2
+
+Time: 5
+		 Finished: 2	 Time taken: 5
+		 Current staff: 0
+
+Time: 5
+		 Starting: 3
+		 Current staff: 2
+
+Time: 5
+		 Starting: 4
+		 Current staff: 6
+
+Time: 6
+		 Finished: 3	 Time taken: 1
+		 Current staff: 4
+
+Time: 6
+		 Starting: 5
+		 Current staff: 7
+
+Time: 7
+		 Finished: 4	 Time taken: 2
+		 Current staff: 3
+
+Time: 7
+		 Starting: 6
+		 Current staff: 7
+
+Time: 10
+		 Finished: 5	 Time taken: 4
+		 Current staff: 4
+
+Time: 15
+		 Finished: 6	 Time taken: 8
+		 Current staff: 0
+
+Time: 15
+		 Starting: 7
+		 Current staff: 2
+
+Time: 15
+		 Starting: 8
+		 Current staff: 5
+
+Time: 16
+		 Finished: 8	 Time taken: 1
+		 Current staff: 2
+
+Time: 18
+		 Finished: 7	 Time taken: 3
+		 Current staff: 0
+
+Finished!
+**** Shortest possible project execution is 18 ****
+Finished!
+**** Shortest possible project execution is 18 ****
+
+
+
+
+
+
+
+
+

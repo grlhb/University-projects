@@ -1,0 +1,12 @@
+1. 
+readProject må ha en tidskompleksitet på O(T^2) hvor T er antall tasks i prosjektet, da det trengs en dobbel for-loop for å legge til alle forgjengere.
+topologicalSort må ha en tidskompleksitet på O(T+E), hvor E er antall avhengigheter, da vi looper gjennom alle tasks og alle outEdges. 
+earliestStart har også en tidskompleksitet på O(T+E), da vi looper gjennom alle tasks og alle predecessors.
+latestStart har samme tidskompleksitet som earliestStart, da vi i prinsippet gjør det samme, men i motsatt rekkefølge.
+optimalTime alene har en tidskompleksitet på O(T) siden vi bare looper gjennom alle tasks, men siden earliestStart kalles på, blir tidskompleksiteten den samme som i earliestStart.
+
+2.
+For at programmet skal funke må prosjektet kunne uttrykkes som en rettet graf med positive vekter og uten sykler, altså en DAG (Directed Acyclic Graph) med positive vekter.
+
+3. 
+Den eneste grafalgoritmen som jeg har brukt (som jeg har hørt om) er topologisk sortering.
